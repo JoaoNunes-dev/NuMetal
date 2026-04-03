@@ -257,3 +257,192 @@ O momento mais marcante (e controverso) da banda ocorreu no festival Woodstock '
 
 </body>
 </html>
+
+
+CSS
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255); /* Texto geral em branco para melhor leitura no fundo preto */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: rgb(255, 8, 0);
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    color: rgb(255, 8, 0);
+    font-size: 1.1rem;
+}
+
+/* Container da Banda - Evolução da sua classe .banda */
+.banda {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 0; 
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 0px rgb(255, 8, 0);
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho da banda */
+.banda-header {
+    background-color: rgb(255, 8, 0);
+    padding: 15px;
+    text-align: center;
+}
+
+.banda-header h2 {
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Layout em colunas para Imagem e Informações */
+.banda-corpo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 25px;
+}
+
+@media (min-width: 768px) {
+    .banda-corpo {
+        grid-template-columns: 300px 1fr;
+    }
+}
+
+.banda-img-container {
+    text-align: center;
+}
+
+.banda img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    border: 3px solid rgb(0, 0, 0);
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+/* Seções de informação (Divisórias) */
+.secao-info {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.secao-info:last-child {
+    border-bottom: none;
+}
+
+.secao-info h3 {
+    color: rgb(255, 8, 0);
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.secao-info p {
+    text-align: justify;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Lista de Integrantes */
+.integrantes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+}
+
+/* Ex-Integrantes */
+.integrante-tag-antigo {
+    background: #e0e0e0; /* Fundo cinzento claro */
+    color: #555; /* Texto cinzento escuro */
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-style: italic;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.integrante-tag {
+    background: #000;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Discografia */
+.discografia {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.album {
+    background: #f4f4f4;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    text-align: center;
+    border-left: 3px solid rgb(255, 8, 0);
+}
+
+/* Links e Botões */
+.links-area {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.botao {
+    display: inline-block;
+    background-color: rgb(0, 0, 0);
+    color: white !important;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: 0.3s;
+    flex: 1;
+    text-align: center;
+    min-width: 150px;
+}
+
+.botao:hover {
+    background-color: rgb(255, 8, 0);
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    color: #555;
+    padding: 40px;
+    font-size: 0.8rem;
+}
